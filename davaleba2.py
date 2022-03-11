@@ -58,3 +58,20 @@
 #
 # firstAnimal= Dog(variety="cuga", color="brown",name="doggo", age="12")
 # Animal.info(firstAnimal)
+
+
+
+class Person:
+    def __init__(self,fname="",lname="",phone=""):
+        self.fname= fname
+        self.lname= lname
+        self.phone= phone
+
+
+class CallMixin(Person):
+    def call(self):
+        print(f"დაირეკოს",{self.fname},{self.lname},"-სთან, ნომერზე:",{self.phone})
+
+
+person1=CallMixin(fname="luka",lname="nebieridze",phone="558462211")
+person1.call()
